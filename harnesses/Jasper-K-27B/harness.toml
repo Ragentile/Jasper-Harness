@@ -1,0 +1,40 @@
+# Jasper-K harness for Jasper-K-27B. Download weights and tokenizer from Hugging Face into ./model.
+base_model = "Qwen3.8-27B"
+team = "Jasper-K-27B"
+
+[model]
+reasoning_effort = "medium"
+autostart = true
+enable_thinking = true
+base_url = "http://127.0.0.1:8111/v1"
+name = ""
+api_key = "EMPTY"
+
+[model.serve]
+# Replace with an absolute checkpoint directory, or place weights/tokenizer in ./model.
+path = "./model"
+port = 8111
+tp = 4
+replicas = 2
+gpu_memory_utilization = 0.85
+wait_seconds = 31536000
+stop_when_done = false
+
+[sampling]
+temperature = 1.0
+top_p = 0.95
+# Compatibility: this client only sends positive top_k values; -1 is omitted.
+# The server/model generation default therefore remains effective.
+top_k = -1
+max_tokens = 61440
+think_budget = 49152
+seed = 0
+
+[loop]
+feedback_style = "Jasper-K"
+truncation_feedback = true
+generation_concurrency_per_replica = 64
+max_rounds = 4
+workers = 0
+eval_profiling = true
+reserve_seconds = 180

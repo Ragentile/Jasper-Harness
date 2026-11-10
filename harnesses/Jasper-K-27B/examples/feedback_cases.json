@@ -1,0 +1,128 @@
+{
+  "success": {
+    "note": "Synthetic protocol fixture; candidate code is illustrative and is not executed.",
+    "kernel_code": "class ModelNew:\n    def forward(self, x):\n        return x\n",
+    "summary": "Illustrative candidate for the feedback-format demonstration.",
+    "response": {
+      "compiled": true,
+      "correctness": true,
+      "cheated": false,
+      "infra_error": false,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "runtime_ms": 0.5,
+      "baseline_runtime_ms": 1.0,
+      "speedup": 2.0,
+      "error_message": "",
+      "metadata": {
+        "illustrative": true
+      }
+    }
+  },
+  "compilation_error": {
+    "note": "Synthetic protocol fixture; candidate code is illustrative and is not executed.",
+    "kernel_code": "class ModelNew:\n    def forward(self, x):\n        return x\n",
+    "summary": "Illustrative candidate for the feedback-format demonstration.",
+    "response": {
+      "compiled": false,
+      "correctness": false,
+      "cheated": false,
+      "infra_error": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "runtime_ms": null,
+      "baseline_runtime_ms": null,
+      "speedup": null,
+      "error_message": "kernel.cu:12: error: identifier 'block_size' is undefined",
+      "metadata": {
+        "illustrative": true
+      }
+    }
+  },
+  "correctness_error": {
+    "note": "Synthetic protocol fixture; candidate code is illustrative and is not executed.",
+    "kernel_code": "class ModelNew:\n    def forward(self, x):\n        return x\n",
+    "summary": "Illustrative candidate for the feedback-format demonstration.",
+    "response": {
+      "compiled": true,
+      "correctness": false,
+      "cheated": false,
+      "infra_error": false,
+      "tests_passed": 3,
+      "tests_total": 5,
+      "runtime_ms": null,
+      "baseline_runtime_ms": 1.0,
+      "speedup": null,
+      "error_message": "Output mismatch on test 4: max_abs_diff=0.125 exceeds atol=0.001.",
+      "metadata": {
+        "illustrative": true
+      }
+    }
+  },
+  "correct_but_slower": {
+    "note": "Synthetic protocol fixture; candidate code is illustrative and is not executed.",
+    "kernel_code": "class ModelNew:\n    def forward(self, x):\n        return x\n",
+    "summary": "Illustrative candidate for the feedback-format demonstration.",
+    "response": {
+      "compiled": true,
+      "correctness": true,
+      "cheated": false,
+      "infra_error": false,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "runtime_ms": 2.0,
+      "baseline_runtime_ms": 1.0,
+      "speedup": 0.5,
+      "error_message": "",
+      "metadata": {
+        "illustrative": true
+      }
+    }
+  },
+  "success_with_profile": {
+    "note": "Synthetic protocol fixture; candidate code is illustrative and is not executed.",
+    "kernel_code": "class ModelNew:\n    def forward(self, x):\n        return x\n",
+    "summary": "Illustrative candidate for the feedback-format demonstration.",
+    "response": {
+      "compiled": true,
+      "correctness": true,
+      "cheated": false,
+      "infra_error": false,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "runtime_ms": 0.5,
+      "baseline_runtime_ms": 1.0,
+      "speedup": 2.0,
+      "error_message": "",
+      "metadata": {
+        "illustrative": true,
+        "profiling": {
+          "events_summary": {
+            "num_trials": 2,
+            "gpu": {
+              "kernel_launches": 4,
+              "busy_ratio": 0.8,
+              "kernel_time_us": 100,
+              "per_trial": {
+                "kernel_launches": 2
+              }
+            },
+            "kernels": {
+              "top": [
+                {
+                  "name": "example_kernel",
+                  "share": 1.0,
+                  "count": 4,
+                  "ops": []
+                }
+              ],
+              "others": {
+                "total_us": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
