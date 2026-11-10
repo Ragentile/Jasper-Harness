@@ -1,0 +1,13 @@
+{
+  "ref_code": "class Model:\n    def forward(self, x):\n        return x\n",
+  "kernel_code": "class ModelNew:\n    def forward(self, x):\n        return x\n",
+  "timeout": 30,
+  "cfg": {
+    "backend": "cuda",
+    "num_correct_trials": 5,
+    "measure_performance": true,
+    "num_perf_trials": 100,
+    "enable_profiling": false,
+    "example_case": "success"
+  }
+}

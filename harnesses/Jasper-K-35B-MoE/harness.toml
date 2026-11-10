@@ -1,0 +1,36 @@
+# Jasper-K harness for Jasper-K-35B-MoE. Download weights and tokenizer from Hugging Face into ./model.
+base_model = "Qwen3.6-35B-A3B"
+team = "Jasper-K-35B-MoE"
+
+[model]
+autostart = true
+enable_thinking = true
+base_url = "http://127.0.0.1:8111/v1"
+name = ""
+api_key = "EMPTY"
+
+[model.serve]
+# Download the checkpoint and tokenizer into ./model, or set an absolute path.
+path = "./model"
+port = 8111
+tp = 8
+replicas = 1
+gpu_memory_utilization = 0.85
+wait_seconds = 31536000
+stop_when_done = false
+
+[sampling]
+temperature = 1.0
+top_p = 0.95
+top_k = 20
+max_tokens = 40960
+think_budget = 32768
+seed = 0
+
+[loop]
+feedback_style = "Jasper-K"
+truncation_feedback = true
+max_rounds = 4
+workers = 0
+eval_profiling = true
+reserve_seconds = 120

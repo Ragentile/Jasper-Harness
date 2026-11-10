@@ -1,0 +1,8 @@
+Jasper-K-35B-MoE inference harness; model checkpoint distributed through Hugging Face
+Copyright 2026 Ragentile Intelligence
+
+Licensed under the Apache License, Version 2.0.
+Base model: Qwen/Qwen3.6-35B-A3B (Apache License, Version 2.0).
+Base model source: https://huggingface.co/Qwen/Qwen3.6-35B-A3B
+The base model was modified through RL post-training.
+External dependencies retain their respective licenses and copyright notices.
