@@ -1,0 +1,22 @@
+ILLUSTRATIVE DATA: exact harness feedback formatting, not measured model performance.
+
+
+## Previous Attempt (Turn 1)
+
+Your reasoning summary: Illustrative candidate for the feedback-format demonstration.
+
+```python
+class ModelNew:
+    def forward(self, x):
+        return x
+
+```
+
+Feedback: Your previous answer was correct but can be made faster. Here is the speedup you achieved relative to the baseline: 2.00x
+
+
+## Instructions
+
+Restart your reasoning process: build on your fastest correct kernel or try a different approach. Generate new, complete code.
+
+Remember: respond using <KERNEL>...</KERNEL> followed by <SUMMARY>...</SUMMARY>.
