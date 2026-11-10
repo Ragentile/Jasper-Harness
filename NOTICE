@@ -1,0 +1,17 @@
+Jasper-K model family and inference harnesses
+Copyright 2026 Ragentile Intelligence
+
+Licensed under the Apache License, Version 2.0.
+
+Base models:
+- Jasper-K-27B: Qwen/Qwen3.8-27B
+  https://huggingface.co/Qwen/Qwen3.8-27B
+- Jasper-K-32B: Qwen/QwQ-32B
+  https://huggingface.co/Qwen/QwQ-32B
+- Jasper-K-35B-MoE: Qwen/Qwen3.6-35B-A3B
+  https://huggingface.co/Qwen/Qwen3.6-35B-A3B
+
+The base models were modified through RL post-training.
+Model weights are distributed through https://huggingface.co/ragentile.
+External dependencies retain their respective licenses and copyright notices.
+See each harness directory's NOTICE for model-specific attribution.
